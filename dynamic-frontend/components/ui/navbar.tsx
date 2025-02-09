@@ -39,7 +39,7 @@ const Navbar = () => {
             {showHomeDropdown && (
               <div className="absolute top-full mt-2 bg-slate-50 shadow-lg rounded-none w-44 px-1">
                 <Link
-                  href="/profile"
+                  href="/myAccount"
                   className="block py-2 text-[14px] font-semibold text-[#0D0E43] hover:bg-pink-300"
                 >
                   My Account
