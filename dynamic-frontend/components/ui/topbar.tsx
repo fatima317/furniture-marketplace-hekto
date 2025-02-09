@@ -1,22 +1,16 @@
-'use client';
-import { useRouter } from 'next/navigation';
-import Link from 'next/link';
 import { ChevronDown } from 'lucide-react'
 import React from 'react'
 
 const Topbar = () => {
-   const router = useRouter();
   return (
     <div className='bg-[#7E33E0] w-full mx-auto px-4 md:px-32 py-2 flex flex-row items-center justify-end'>
       <div className='hidden md:flex items-center gap-8'>
-        <Link href={'/'}
-        className='flex items-center text-[#F1F1F1] text-sm md:text-base font-medium gap-1 cursor-pointer'>
+        <p className='flex items-center text-[#F1F1F1] text-sm md:text-base font-medium gap-1 cursor-pointer'>
           Login
-        </Link>
-        <Link href={'/'}
-        className='flex items-center text-[#F1F1F1] text-sm md:text-base font-medium gap-1 cursor-pointer'>
+        </p>
+        <p className='flex items-center text-[#F1F1F1] text-sm md:text-base font-medium gap-1 cursor-pointer'>
           Signup 
-        </Link>
+        </p>
         <p className='flex items-center text-[#F1F1F1] text-sm md:text-base font-medium gap-1 cursor-pointer'>
           Sell On Hekto
         </p>

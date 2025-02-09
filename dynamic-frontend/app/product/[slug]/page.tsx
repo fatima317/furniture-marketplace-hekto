@@ -10,7 +10,7 @@ import { addToCart } from "@/app/actions/action";
 import { Button } from "@/components/ui/button";
 import Swal from "sweetalert2";
 import Link from "next/link";
-import { Heart, ShareIcon, Star } from "lucide-react";
+import { Heart, ShareIcon } from "lucide-react";
 
 async function getProduct(slug: string): Promise<Product> {
   return client.fetch(
