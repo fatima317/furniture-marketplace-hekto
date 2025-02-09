@@ -1,67 +1,85 @@
 export default {
-    name : "order",
-    type : "document",
-    title : "Order",
+    name : 'order',
+    title : 'Order',
+    type : 'document',
     fields : [
         {
-            name: "name",
-            title: "Name",
-            type: "string"
+            name : 'name',
+            title : 'Name',
+            type : 'string'
         },
         {
-            name: "email",
-            title: "Email",
-            type: "string"
+            name : 'email',
+            title : 'Email',
+            type : 'string'
         },
         {
-            name: "phone",
-            title: "Phone",
-            type: "number"
+            name : 'orderDate',
+            title : 'Order Date',
+            type : 'datetime'
         },
         {
-            name: "address",
-            title: "Address",
-            type: "string"
+            name : 'phone',
+            title : 'Phone',
+            type : 'string'
         },
         {
-            name: "city",
-            title: "City",
-            type: "string"
+            name : 'address',
+            title : 'Address',
+            type : 'string'
         },
         {
-            name: "zipCode",
-            title: "Zip Code",
-            type: "string"
+            name : 'city',
+            title : 'City',
+            type : 'string'
         },
         {
-            name: "discount",
-            title: "Discount",
-            type: "number"
+            name : 'zipCode',
+            title : 'Zip Code',
+            type : 'string'
         },
         {
-            name: "cartItems",
-            title: "Cart Items",
-            type: "array",
-            of: [{ type: "reference", to: {type: "product"}}]
+            name : 'cartItems',
+            title : 'Cart Items',
+            type : 'array',
+            of : [{type : 'reference', to : { type : 'product' } }]
         },
         {
-            name: "total",
-            title: "Total",
-            type: "number"
+            name : 'total',
+            title : 'Total',
+            type : 'number'
         },
         {
-            name: "status",
-            title: "Order Status",
-            type: "string",
-            options: {
-                list: [
-                    {title: "Pending", value: "pending"},
-                    {title: "Completed", value: "completed"},
-                    {title: "Cancelled", value: "cancelled"}
-                ],
-                layout: "radio"
+            name : 'discount',
+            title : 'Discount',
+            type : 'number'
+        },
+        {
+            name : 'status',
+            title : 'Status',
+            type : 'string',
+            options : {
+                list : [
+                    {
+                        title : 'Pending',
+                        value : 'pending'
+                    },
+                    {
+                        title : 'Processing',
+                        value : 'processing'
+                    },
+                    {
+                        title : 'Completed',
+                        value : 'completed'
+                    },
+                    {
+                        title : 'Cancelled',
+                        value : 'cancelled'
+                    },
+                ], 
+                layout : 'radio'
             },
-            initialValue : "pending"
-        }
-    ]
-}
+            initialValue : 'pending'
+        },
+    ],
+};

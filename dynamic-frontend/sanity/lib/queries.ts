@@ -22,4 +22,3 @@ export const topProduct = groq`[
     ]`;
 
 export const middleTwo = groq`[*[_type == "product"][11]]`;
-

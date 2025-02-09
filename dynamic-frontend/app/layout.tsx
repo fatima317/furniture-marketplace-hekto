@@ -5,6 +5,7 @@ import Topbar from "@/components/ui/topbar";
 import Navbar from "@/components/ui/navbar";
 import Footer from "@/components/ui/footer";
 
+
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",

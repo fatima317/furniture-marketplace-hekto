@@ -109,15 +109,6 @@ export default function ProductPage() {
         </div>
         <div className="w-full md:w-1/2 mt-6 md:mt-0 px-4">
           <h1 className="text-2xl md:text-3xl font-bold">{product.name}</h1>
-          <div className="flex gap-1 my-2">
-            {[...Array(5)].map((_, i) => (
-              <Star
-                key={i}
-                className="w-5 h-5 fill-yellow-500 stroke-yellow-500"
-              />
-            ))}
-            <span className="text-gray-500 ml-2 text-sm">22 Ratings</span>
-          </div>
           <div className="mt-2">
             {product.discountPercentage > 0 ? (
               <>

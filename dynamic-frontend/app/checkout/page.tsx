@@ -96,7 +96,7 @@ const Checkout = () => {
             address : formValues.address,
             city : formValues.city,
             zipCode : formValues.zipCode,
-            cartItems : cartItems.map(item => ({ _type: 'reference', _ref: item.name })),
+            cartItems : cartItems.map((item) => ({ _type : "reference", _ref : item._id }) ),
             total : total,
             discount : discount,
             orderDate : new Date().toISOString(),
