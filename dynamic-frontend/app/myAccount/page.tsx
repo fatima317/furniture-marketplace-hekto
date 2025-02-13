@@ -1,5 +1,4 @@
 import { SignedIn, SignedOut, SignInButton, SignOutButton, SignUpButton, UserButton } from '@clerk/nextjs' 
-import Link from 'next/link'
 import React from 'react'
 
 export default function Loginpage() {
