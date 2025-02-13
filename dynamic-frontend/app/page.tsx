@@ -8,7 +8,6 @@ import MiddleThree from "@/components/ui/middleThree";
 import MiddleTwo from "@/components/ui/middleTwo";
 import TopCategories from "@/components/ui/topProducts";
 import TrendingProducts from "@/components/ui/trendingProducts";
-import ProductCards from "./furniture/page";
 
 
 export default function Home() {
@@ -23,7 +22,6 @@ export default function Home() {
       <TopCategories />
       <MiddleThree />
       <MiddleFour />
-      <ProductCards />
       <LatestBlog />
     </div>
   );

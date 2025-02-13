@@ -45,16 +45,16 @@ const Navbar = () => {
                   My Account
                 </Link>
                 <Link
-                  href="/shoppingCurt"
+                  href="/shoppingCart"
                   className="block py-2 text-[14px] font-semibold text-[#0D0E43] hover:bg-pink-300"
                 >
                   Shopping Cart
                 </Link>
                 <Link
-                  href="/orderCompleted"
+                  href="/checkout"
                   className="block py-2 text-[14px] font-semibold text-[#0D0E43] hover:bg-pink-300"
                 >
-                  Wishlist
+                  Payment & Delivery
                 </Link>
                 <Link
                   href="/aboutUs"
@@ -76,13 +76,6 @@ const Navbar = () => {
           <p>
             <Link href="/productList" className="text-[16px] font-medium">
             Explore Our Products
-            </Link>
-          </p>
-
-          {/* Blog */}
-          <p>
-            <Link href="/blogPage" className="text-[16px] font-medium">
-              Blog
             </Link>
           </p>
 
@@ -118,24 +111,17 @@ const Navbar = () => {
                 <div className='flex flex-col gap-6 mt-6'>
                     <Link href={"/"} className='text-sm font-medium'>Home</Link>
                     <Link href={"/myAccount"} className='text-sm font-medium'>My Account</Link>
-                    <Link href={"/shopGridDefault"} className='text-sm font-medium'>Shop</Link>
-                    <Link href={"/productDetails"} className='text-sm font-medium'>Products</Link>
+                    <Link href={"/shopList"} className='text-sm font-medium'>Shop</Link>
+                    <Link href={"/productList"} className='text-sm font-medium'>Products</Link>
                     <div className="relative flex items-center">
-                    <p onClick={() => router.push('/notFound')} className="text-sm font-medium cursor-pointer">Pages</p>
                     <ChevronDown className="w-5 h-4 cursor-pointer" onClick={() => setShowPageDropdown(!showPageDropdown)}/>
                     {showPageDropdown && (
                    <div className="absolute top-full mt-2 ml-12 px-4 bg-slate-100 w-40 shadow-lg rounded-none">
-                    <Link href={"/shoppingCurt"} className='block text-sm font-medium mb-4 mt-4'> Shopping Cart</Link>
-                    <Link href={"/orderCompleted"} className='block text-sm font-medium mb-4'>Order Completed</Link>
-                    <Link href={"/shopList"} className='block text-sm font-medium mb-4'> Shop List</Link>
-                    <Link href={"/shopLeftSidebar"} className='block text-sm font-medium mb-4'> Shop Left Sidebar</Link>
-                    <Link href={"/singleBlog"} className='block text-sm font-medium mb-4'> Single Blog</Link>
-                    <Link href={"/hektoDemo"} className='block text-sm font-medium mb-4'> Hekto Demo</Link>
+                    <Link href={"/shoppingCart"} className='block text-sm font-medium mb-4 mt-4'> Shopping Cart</Link>
+                    <Link href={"/checkout"} className='block text-sm font-medium mb-4'>Payment & Delivery</Link>
                    </div>
                     )}
                     </div>
-                    <Link href={"/blogPage"} className='text-sm font-medium'>Blog</Link>
-                    <Link href={"/contactUs"} className='text-sm font-medium'>Contact</Link>
                     <Link href={"/aboutUs"} className='text-sm font-medium'> About Us</Link>
                     <Link href={"/faq"} className='text-sm font-medium'>FAQ</Link>
                 <div className='mt-12'>

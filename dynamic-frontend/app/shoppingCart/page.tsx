@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import Image from 'next/image';
 import { urlFor } from '@/sanity/lib/image';
 import { useRouter } from 'next/navigation';
+import AuthGuard from '@/components/ui/AuthGuard';
 
 const CartPage = () => {
   const [cartItems, setCartItems] = useState<Product[]>([]);
@@ -73,6 +74,7 @@ const CartPage = () => {
   };
 
   return (
+    <AuthGuard>
     <div className='container mx-auto p-8 bg-slate-100'>
       <h1 className='text-3xl font-bold mb-6 text-center text-[#101750]'>Shopping Cart</h1>
       {cartItems.length === 0 ? (
@@ -134,6 +136,7 @@ const CartPage = () => {
         </div>
       )}
     </div> 
+    </AuthGuard>
   );
 };
 
