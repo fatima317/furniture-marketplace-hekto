@@ -7,9 +7,10 @@ import { Button } from "@/components/ui/button";
 import Swal from "sweetalert2";
 import { client } from "@/sanity/lib/client";
 import AuthGuard from "@/components/ui/AuthGuard";
+import { Product } from "@/types/products";
 
 export default function Checkout() {
-  const [cartItems, setCartItems] = useState<any[]>([]);
+  const [cartItems, setCartItems] = useState<Product[]>([]);
   const [discount, setDiscount] = useState<number>(0);
   const [formValues, setFormValues] = useState({
     name: "",
