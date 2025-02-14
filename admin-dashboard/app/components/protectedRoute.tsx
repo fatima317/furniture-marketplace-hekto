@@ -1,15 +1,17 @@
-"use client"
-import { useRouter } from 'next/navigation'
-import React, { useEffect } from 'react'
+"use client";
+import { useUser } from "@clerk/nextjs";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
-export default function ProtectedRoute({children} : {children : React.ReactNode}) {
-    const router = useRouter()
+export default function ProtectedRoute({ children }: { children: React.ReactNode }) {
+  const { isSignedIn } = useUser();
+  const router = useRouter();
 
-    useEffect(() => {
-        const isLogin = localStorage.getItem('isLogin')
-        if (!isLogin) {
-            router.push('/admin')
-        }
-    }, [router])
-  return <>{children}</>
+  useEffect(() => {
+    if (!isSignedIn) {
+      router.push("/admin");
+    }
+  }, [isSignedIn, router]);
+
+  return <>{children}</>;
 }
