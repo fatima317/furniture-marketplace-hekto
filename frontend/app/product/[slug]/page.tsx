@@ -43,6 +43,7 @@ async function getRelatedProducts(category: string, currentProductId: string): P
 
 export default function ProductPage() {
   const { slug } = useParams();
+  const router = useRouter();
   const [product, setProduct] = useState<Product | null>(null);
   const [relatedProducts, setRelatedProducts] = useState<Product[]>([]);
   const [quantity, setQuantity] = useState<number>(1);
@@ -83,7 +84,7 @@ export default function ProductPage() {
     });
     addToCart({ ...product, quantity });
   };
-  const router = useRouter();
+ 
   const handleBuyNow = () => {
     Swal.fire({
       position: "center",
