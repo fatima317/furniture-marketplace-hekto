@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@clerk/nextjs": "^6.11.3",
     "@sanity/image-url": "^1.1.0",
     "@sanity/vision": "^3.74.1",
     "next": "15.1.6",
@@ -16,7 +17,8 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "sanity": "^3.74.1",
-    "styled-components": "^6.1.15"
+    "styled-components": "^6.1.15",
+    "sweetalert2": "^11.16.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
