@@ -83,8 +83,7 @@ export default function ProductPage() {
     });
     addToCart({ ...product, quantity });
   };
-
-  const router = useRouter()
+  const router = useRouter();
   const handleBuyNow = () => {
     Swal.fire({
       position: "center",
