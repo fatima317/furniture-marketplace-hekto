@@ -85,7 +85,7 @@ export default function AdminDashboard() {
       await client.delete(orderId);
       setOrders((prevOrders) => prevOrders.filter((order) => order._id !== orderId));
       Swal.fire("Deleted!", "Order has been deleted successfully.", "success");
-    } catch (error) {
+    } catch {
       Swal.fire("Error!", "Error deleting order.", "error");
     }
   };
@@ -98,7 +98,7 @@ export default function AdminDashboard() {
         prevOrders.map((order) => (order._id === orderId ? { ...order, status: newStatus } : order))
       );
       Swal.fire("Success!", `Order status updated to ${newStatus}.`, "success");
-    } catch (error) {
+    } catch {
       Swal.fire("Error!", "Error updating order status.", "error");
     }
   };

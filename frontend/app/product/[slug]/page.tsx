@@ -72,7 +72,7 @@ export default function ProductPage() {
       setQuantity(quantity - 1);
     }
   };
-  const router = useRouter()
+  
   const handleAddToCart = () => {
     Swal.fire({
       position: "center",
@@ -84,6 +84,7 @@ export default function ProductPage() {
     addToCart({ ...product, quantity });
   };
 
+  const router = useRouter()
   const handleBuyNow = () => {
     Swal.fire({
       position: "center",
